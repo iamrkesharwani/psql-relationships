@@ -12,9 +12,9 @@ const startApp = async () => {
   const feed = await event.getPostUsersWithLeftJoin();
   console.log('Current Feed:', feed);
 
-  // await event.deleteUser(user1);
-  // const remainingPosts = await event.getPostUsersWithLeftJoin();
-  // console.log('Posts left wit user:', remainingPosts.length);
+  await event.deleteUser(user1);
+  const remainingPosts = await event.getPostWithAuthors();
+  console.log('Posts left wit user:', remainingPosts.length);
 };
 
 startApp();
